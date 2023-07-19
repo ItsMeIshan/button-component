@@ -1,31 +1,207 @@
-import { Meta, Story } from "@storybook/addon-docs/blocks";
+import { Meta, Story } from "@storybook/blocks";
 import Button from "./Button.js";
 
 <Meta
   title="Button"
   component={Button}
   argTypes={{
+    variant: {
+      control: {
+        type: "select",
+      },
+      options: ["outline", "text"],
+    },
     size: {
       control: {
         type: "select",
-        options: ["small", "large"],
       },
+      options: ["sm", "md", "lg"],
     },
-    width: {
+    color: {
       control: {
-        type: "number",
+        type: "select",
       },
+      options: ["default", "primary", "secondary", "danger"],
     },
-  }}
+    disableShadow: {
+      control: "boolean",
+    },
+    disabled: {
+      control: "boolean",
+    },
+    startIcon: {
+      control: {
+        type: "select",
+      },
+      options: ["search", "local_grocery_store", "delete", "airplay", "book"],
+    },
+    endIcon: {
+      control: {
+        type: "select",
+      },
+      options: ["search", "local_grocery_store", "delete", "airplay", "book"],
+    }
+
+}}
 />
-export const Template = (args) => <Button {...args} />
+export const Template = (args) => <Button {...args}>Default</Button>
 
 # Button
 
+`<Button>Default</Button>`
+
+<Story name="Default">{Template.bind({})}</Story>
+
+`<Button variant="outline">Default</Button>`
+
 <Story
-  name="Default"
+  name="outline"
   args={{
-    size: "small",
+    variant: "outline",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button variant="text">Default</Button>`
+
+<Story
+  name="text"
+  args={{
+    variant: "text",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button disableShadow={true}>Default</Button>`
+
+<Story
+  name="Shadow Disabled"
+  args={{
+    disableShadow: "true",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button disabled={true}>Default</Button>`
+
+<Story
+  name="Disabled Button"
+  args={{
+    disabled: true,
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button disabled={true} variant="text">Default</Button>`
+
+<Story
+  name="Disabled text Button"
+  args={{
+    disabled: true,
+    variant: "text",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button startIcon="search">Default</Button>`
+
+<Story
+  name="Start Icon Button"
+  args={{
+    startIcon: "search",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button endIcon="search">Default</Button>`
+
+<Story
+  name="End Icon Button"
+  args={{
+    endIcon: "search",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button size="sm">Default</Button>`
+
+<Story
+  name="Small Sized Button"
+  args={{
+    size: "sm",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button size="md">Default</Button>`
+
+<Story
+  name="Medium Sized Button"
+  args={{
+    size: "md",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button size="lg">Default</Button>`
+
+<Story
+  name="Large Sized Button"
+  args={{
+    size: "lg",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button color="default">Default</Button>`
+
+<Story
+  name="Default Colored Button"
+  args={{
+    color: "default",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button color="primary">Default</Button>`
+
+<Story
+  name="Primary Colored Button"
+  args={{
+    color: "primary",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button color="secondary">Default</Button>`
+
+<Story
+  name="Secondary Colored Button"
+  args={{
+    color: "secondary",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+`<Button color="danger">Default</Button>`
+
+<Story
+  name="Danger Colored Button"
+  args={{
+    color: "danger",
   }}
 >
   {Template.bind({})}
