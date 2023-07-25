@@ -1,5 +1,6 @@
 # button-component
 
+## Screenshots
 ![localhost_6006__path=_docs_button--docs](https://github.com/ItsMeIshan/button-component/assets/65131563/75df76ec-9864-4122-be4a-5c8c24a2b20d)
 
 ![localhost_6006__path=_docs_button--docs (1)](https://github.com/ItsMeIshan/button-component/assets/65131563/05fc1357-9100-418a-9951-ca77591e5df2)
