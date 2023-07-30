@@ -17,7 +17,7 @@ My goal was to build a reusable Button Component that can be used consistently i
 ## Component Usage
 - 3 types of Button Component are supported *default, outline & text*. We can change the button type from `variant` Prop.
 - There are other props like changing the color of button with the help of `color` prop it has 4 options to be used *default, primary, secondary & danger*.
-- `size` Prop for changing different size of buttons which has different options such as `sm`, `md` & `lg`.
+- `size` prop for changing different size of buttons which has different options such as `sm`, `md` & `lg`.
 - a `disabled` prop which accepts boolean value to show a disabled button state.
 - button component can accept icons through two props `startIcon` or `endIcon` different props but both props cannot be passed together. These props have 5 options for now *search, local_grocery_store, delete, airplay & book*.
 - for more information have look at [docs](https://button-component-storybook.netlify.app/?path=/docs/button--docs)
